@@ -13,7 +13,7 @@ import Kingfisher
 extension Reactive where Base == KingfisherWrapper<UIImageView> {
     public func setImage(with source: Source?,
                          placeholder: Placeholder? = nil,
-                         options: KingfisherOptionsInfo? = nil) -> Single<Image> {
+                         options: KingfisherOptionsInfo? = nil) -> Single<UIImage> {
         return Single.create { [base] single in
             let task = base.setImage(with: source,
                                      placeholder: placeholder,
